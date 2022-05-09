@@ -28,7 +28,7 @@ int main(const int argc, const char** argv){
 			if(event.type == sf::Event::Closed){
 				_mainWindow.close();
 			}
-			_mainWindow.clear();
+			_mainWindow.clear(sf::Color(255, 255, 255, 255));
 			Update(_mainWindow, players);
 			 _mainWindow.display();
 		}

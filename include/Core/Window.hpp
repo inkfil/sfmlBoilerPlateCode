@@ -16,16 +16,18 @@ enum WindowStyle {};
 class Window{
 	// Window Generation.
 	// Event Handling.
+    // Splash Screen.
 
     public:
-        Window(const unsigned int length, const unsigned int height, const std::string& title);
+        Window(const unsigned int _length, const unsigned int _height, const std::string& _title);
         void pollEvent();
         int getWindowHeight() const ;
         int getWindowWidth() const ;
         std::string getWindowTitle() const ;
         void setWindowBorderStyle();
         int getFrameRateLimit() const ;
-        void setFrameRateLimit(const unsigned int frameRateLimit);
+        void setFrameRateLimit(const unsigned int _frameRateLimit);
+        void setWindowBackgroundColor(const sf::Color& _bgColor);
 
     private:
         unsigned int winHeight = 480;
@@ -34,6 +36,7 @@ class Window{
         std::string winTitle;
         sf::RenderWindow sfWindow;
         sf::Event winEvent;
+        sf::Color bgColor;
 };
 
 #endif
