@@ -3,7 +3,6 @@
 void Update(sf::RenderWindow& _mainWindow, std::vector<sf::CircleShape>& players){
 	for(auto& player : players){
 		_mainWindow.draw(player);
-		// BOOST_LOG_TRIVIAL(trace)<<"Drawing player to window.";
 	}
 }
  
